@@ -1,0 +1,19 @@
+package a34To55;
+
+import java.util.Scanner;
+class ExitOnExit {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        while (true) {
+            System.out.print("Enter your command: ");
+            String command = input.next();
+            if (command.equals("exit")) {
+//                if (command.equalsIgnoreCase("exit")) {    // ye small ya captal dono ko accept karta hai
+
+                    break;
+            }
+        }
+        System.out.println("You have successfully exited.");
+    }
+
+}
