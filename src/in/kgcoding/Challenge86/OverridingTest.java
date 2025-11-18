@@ -1,0 +1,11 @@
+package in.kgcoding.Challenge86;
+
+public class OverridingTest {
+
+    public static void main(String[] args) {
+        Car car = new Car();
+        Vehicle veh = new Vehicle();
+        veh.service();
+        car.service();
+    }
+}
