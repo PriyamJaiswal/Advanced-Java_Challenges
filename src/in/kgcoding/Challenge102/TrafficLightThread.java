@@ -1,0 +1,21 @@
+package in.kgcoding.Challenge102;
+
+public class TrafficLightThread extends Thread {
+
+    private final TrafficColor color;
+
+    public TrafficLightThread(TrafficColor color) {
+        this.color = color;
+    }
+
+    @Override
+    public void run() {
+        System.out.printf("%s active\n", color);
+        try {
+            Thread.sleep(color.getOnTimeToMills());
+        } catch (InterruptedException ex) {
+            throw new RuntimeException(ex);
+        }
+        System.out.printf("%s Inactive\n", color);
+    }
+}
